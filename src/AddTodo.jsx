@@ -15,7 +15,6 @@ export function AddTodo(){
             if(todo.toEdit === true){
                 setInput(todo.text)
                 setId(todo.id)
-                dispatch(updateEditStatus(todo.id))
                 setEditing(true)
             }
         })
@@ -35,6 +34,7 @@ export function AddTodo(){
     function handleEdit(e){
         e.preventDefault()
         setInput(e.target.value)
+        dispatch(updateEditStatus(id))
         dispatch(updateTodo({id: id, text: input}))
         setId("")
         setInput("")
