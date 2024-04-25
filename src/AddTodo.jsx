@@ -42,9 +42,9 @@ export function AddTodo(){
     }
 
     return (
-        <form onSubmit={!editing ? handleSubmit : handleEdit}>
-            <input value={input} onChange={handleInput}></input>
-            <button type="submit">{!editing ? "Add" : "Edit"}</button>
+        <form className= " flex justify-center gap-[20px] h-[40px]  w-fit" onSubmit={!editing ? handleSubmit : handleEdit}>
+            <input className="pl-[10px] border border-solid  border-gray-300 border-2 rounded-sm w-[300px] sm:w-[500px]" placeholder="Add A Todo" value={input} onChange={handleInput}></input>
+            <button className="w-[60px] text-white font-bold bg-blue-500" type="submit">{!editing ? "Add" : "Edit"}</button>
         </form>
     )
 }

@@ -9,12 +9,15 @@ import { Todos } from './TODOS.jsx'
 
 function App() {
   return (
-    <Provider store={store}>
-      <h1> Redux Toolkit Todo </h1>
-      <AddTodo/>
-      <Todos/>
+    <div className="flex flex-col gap-[30px] items-center align-center">
+      <Provider store={store}>
+        <h1 className=" text-[40px] font-semibold"> Redux Toolkit Todo </h1>
+        <AddTodo />
+        <Todos/>
      
-    </Provider>
+      </Provider>
+    </div>
+    
   )
 }
 
